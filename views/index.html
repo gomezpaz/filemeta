@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Metadata</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Add bootstrap framework -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body class="back">
+    <div class="app">
+      <h1 class="title1 text-center">
+        File Metadata Microservice
+      </h1>
+      <hr class="my-3 box">
+      <h4 class="title2 text-center">
+        FCC Backend Assignment
+      </h4>
+      <div class="box">
+        <p class="title3">
+          Instructions
+        </p>
+        <p class="plainText">
+          Select file, upload it and get the size in Bytes in return. Is that simple :D
+        </p>
+        <form enctype="multipart/form-data" action="/fileupload" method="post">
+          <label id="label" for="file" class="btn btn-dark btn-send">SELECT FILE</label>
+          <input id="file" type="file" style="display: none" name="filetoupload" onchange="changeFileText(event)">
+          <br>
+          <input value="SEND" type="submit" class="btn btn-dark text-center">
+        </form>
+      </div>
+      <h6 class="text-center name title2">
+        Santiago Gomez Paz &copy;
+      </h6>
+    </div>
+    
+    <script>
+      // Change btn text for name of selected file
+      let label = document.getElementById('label')
+      function changeFileText(event) {
+        let filename = event.target.value.split('\\').pop()
+        label.innerText = filename
+      }
+    </script>
+    
+  </body>
+</html>
