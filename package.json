@@ -1,0 +1,25 @@
+{
+  "name": "focdec-filemeta",
+  "version": "0.0.1",
+  "description": "Basic node.js File Metadata Microservice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "multer": "*"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/sgomezpaz/filemeta"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
