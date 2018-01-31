@@ -15,9 +15,10 @@ app.get("/", function (request, response) {
 // Get file
 app.post("/fileupload", upload.single("filetoupload"), function(req, res) {
   // Return size of file
-  res.send({
-    size: req.file.size
-  })
+  if(!req.file)
+    res.send({ size: null })
+  else
+    res.send({ size: req.file.size })
 })
 
 // listen for requests :)
